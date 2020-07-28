@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".RankingList">
+    <FrameLayout
+        android:layout_width="400sp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginVertical="10sp"
+            android:layout_gravity="left|bottom"
+            android:onClick="gameHome"
+            android:src="@drawable/icon_home">
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/baseColor"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            android:text="排行榜">
+        </TextView>
+    </FrameLayout>
+
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TextView android:layout_width="50sp"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"/>
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:text="杀敌"
+                android:textAlignment="center"
+                android:textColor="@color/baseColor"
+                android:textSize="20sp">
+
+            </TextView>
+            <TextView android:layout_width="60sp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/baseColor"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:layout_margin="10sp"
+                android:text="时间">
+
+            </TextView>
+        </TableRow>
+        <TableRow>
+            <TextView android:layout_width="50sp"
+                android:layout_height="match_parent"
+                android:textColor="@color/baseColor"
+                android:layout_margin="10sp"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:text="1"/>
+            <TextView android:layout_width="60sp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/enemyWhite"
+                android:layout_margin="10sp"
+                android:id="@+id/rank_list_first_kills"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:text="1820">
+
+            </TextView>
+            <TextView android:layout_width="60sp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/enemyWhite"
+                android:id="@+id/rank_list_first_times"
+                android:layout_margin="10sp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:text="80s">
+
+            </TextView>
+        </TableRow>
+        <TableRow>
+            <TextView android:layout_width="50sp"
+                android:layout_height="match_parent"
+                android:textColor="@color/baseColor"
+                android:layout_margin="10sp"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:text="2"/>
+            <TextView android:layout_width="60sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/rank_list_second_kills"
+                android:textColor="@color/enemyWhite"
+                android:layout_margin="10sp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:text="1500">
+
+            </TextView>
+            <TextView android:layout_width="60sp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/enemyWhite"
+                android:id="@+id/rank_list_second_times"
+                android:layout_margin="10sp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:text="52s">
+
+            </TextView>
+        </TableRow>
+        <TableRow>
+            <TextView android:layout_width="50sp"
+                android:layout_height="match_parent"
+                android:textColor="@color/baseColor"
+                android:layout_margin="10sp"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:text="3"/>
+            <TextView android:layout_width="60sp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/enemyWhite"
+                android:id="@+id/rank_list_thirsty_kills"
+                android:layout_margin="10sp"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:text="500">
+
+            </TextView>
+            <TextView android:layout_width="60sp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/enemyWhite"
+                android:id="@+id/rank_list_thirsty_times"
+                android:layout_margin="10sp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:text="22s">
+            </TextView>
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>

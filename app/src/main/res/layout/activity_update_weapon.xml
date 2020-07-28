@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:gravity="center"
+    tools:context=".UpdateWeapon">
+    <FrameLayout
+        android:layout_width="400sp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginVertical="10sp"
+            android:layout_gravity="left|bottom"
+            android:onClick="gameHome"
+            android:src="@drawable/icon_home">
+
+        </ImageView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_back_thin"
+            android:orientation="horizontal"
+            android:padding="5sp">
+            <ImageView
+                android:layout_width="35sp"
+                android:layout_height="35sp"
+                android:src="@drawable/crystal_icon">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/all_crystal_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingHorizontal="15sp"
+                android:text="255500"
+                android:textColor="@color/enemyWhite" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20sp"
+        android:orientation="vertical"
+        android:background="@drawable/button_back_thin">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5sp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:padding="3sp"
+                android:src="@drawable/boom_skill_icon">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/enemyWhite"
+                android:layout_gravity="center"
+                android:paddingHorizontal="15sp"
+                android:text="标准炸弹">
+
+            </TextView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/enemyWhite"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    android:text="升级为范围更大的炸弹">
+                </TextView>
+                <ImageView
+                    android:layout_width="150sp"
+                    android:layout_height="20sp"
+                    android:id="@+id/boom_skill_level"
+                    android:src="@drawable/skill_level0">
+
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="skillBoomUpdate"
+                android:background="@drawable/button_back_thin"
+                android:layout_marginHorizontal="10sp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="60sp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/skill_boom_need"
+                    android:text="1000"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/enemyWhite"
+                    android:textSize="15sp">
+                </TextView>
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_marginHorizontal="5sp"
+                    android:src="@drawable/crystal_icon">
+
+                </ImageView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5sp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:padding="3sp"
+                android:src="@drawable/frozen_skill_icon">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/enemyWhite"
+                android:layout_gravity="center"
+                android:paddingHorizontal="15sp"
+                android:text="超级冰冻">
+
+            </TextView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/enemyWhite"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    android:text="升级为范围更大的冰冻">
+                </TextView>
+                <ImageView
+                    android:layout_width="150sp"
+                    android:layout_height="20sp"
+                    android:id="@+id/frozen_skill_level"
+                    android:src="@drawable/skill_level0">
+
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="skillFrozenUpdate"
+                android:background="@drawable/button_back_thin"
+                android:layout_marginHorizontal="10sp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="60sp"
+                    android:layout_height="match_parent"
+                    android:text="1000"
+                    android:id="@+id/skill_frozen_need"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/enemyWhite"
+                    android:textSize="15sp">
+                </TextView>
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_marginHorizontal="5sp"
+                    android:src="@drawable/crystal_icon">
+
+                </ImageView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5sp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:padding="3sp"
+                android:src="@drawable/skill_wind_icon">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/enemyWhite"
+                android:layout_gravity="center"
+                android:paddingHorizontal="15sp"
+                android:text="风暴漩涡">
+
+            </TextView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/enemyWhite"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    android:text="升级为时间更长的风暴">
+                </TextView>
+                <ImageView
+                    android:layout_width="150sp"
+                    android:layout_height="20sp"
+                    android:id="@+id/wind_skill_level"
+                    android:src="@drawable/skill_level0">
+
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="skillWindUpdate"
+                android:background="@drawable/button_back_thin"
+                android:layout_marginHorizontal="10sp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="60sp"
+                    android:layout_height="match_parent"
+                    android:text="1000"
+                    android:id="@+id/skill_wind_need"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/enemyWhite"
+                    android:textSize="15sp">
+                </TextView>
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_marginHorizontal="5sp"
+                    android:src="@drawable/crystal_icon">
+
+                </ImageView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5sp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:padding="3sp"
+                android:src="@drawable/skill_shield_icon">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/enemyWhite"
+                android:layout_gravity="center"
+                android:paddingHorizontal="15sp"
+                android:text="电磁护盾">
+
+            </TextView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/enemyWhite"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    android:text="升级护盾保护时间">
+                </TextView>
+                <ImageView
+                    android:layout_width="150sp"
+                    android:layout_height="20sp"
+                    android:id="@+id/shield_skill_level"
+                    android:src="@drawable/skill_level0">
+
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="skillShieldUpdate"
+                android:background="@drawable/button_back_thin"
+                android:layout_marginHorizontal="10sp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="60sp"
+                    android:layout_height="match_parent"
+                    android:text="1000"
+                    android:id="@+id/skill_shield_need"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/enemyWhite"
+                    android:textSize="15sp">
+                </TextView>
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_marginHorizontal="5sp"
+                    android:src="@drawable/crystal_icon">
+
+                </ImageView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:padding="3sp"
+                android:src="@drawable/lighting_skill_icon">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/enemyWhite"
+                android:layout_gravity="center"
+                android:paddingHorizontal="15sp"
+                android:text="宇宙激光">
+
+            </TextView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/enemyWhite"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    android:text="升级为威力更大的激光">
+                </TextView>
+                <ImageView
+                    android:layout_width="150sp"
+                    android:layout_height="20sp"
+                    android:id="@+id/lighting_skill_level"
+                    android:src="@drawable/skill_level0">
+
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="skillLightingUpdate"
+                android:background="@drawable/button_back_thin"
+                android:layout_marginHorizontal="10sp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="60sp"
+                    android:layout_height="match_parent"
+                    android:text="1000"
+                    android:id="@+id/skill_lighting_need"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/enemyWhite"
+                    android:textSize="15sp">
+                </TextView>
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_marginHorizontal="5sp"
+                    android:src="@drawable/crystal_icon">
+
+                </ImageView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
